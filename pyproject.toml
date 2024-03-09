@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pysetup"
+version = "2024.0.1"
+authors = [
+  { name="GBiondo1310", email="giacomo.biondelli@gmail.com" },
+]
+description = "nctht_server"
+readme = "README.md"
+dependencies = [
+]
+
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/GBiondo1310/nctht_server"
+Issues = "https://github.com/GBiondo1310/nctht_server/issues"
