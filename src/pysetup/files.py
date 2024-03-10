@@ -10,9 +10,7 @@ authors = [
 ]
 description = "%proj_brief%"
 readme = "README.md"
-dependencies = [
-    %dependencies%
-]
+dependencies = %dependencies%
 
 requires-python = ">=3.8"
 classifiers = [
@@ -23,12 +21,13 @@ classifiers = [
 
 [project.urls]
 Homepage = "%homepage%"
+Github = "%github%"
 Issues = "%issues%"
 """
 
 MIT_LICENSE = """MIT License
 
-Copyright (c) 2024 "%author%"
+Copyright (c) "%year%" "%author%"
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -65,3 +64,50 @@ pip install -e .
 pip install project_name@git+"github_link#egg=<project_name>"
 ```
 """
+
+STRUCT = """{
+    "project_name_required":"Your project name here",
+    "project_version": "0.0",
+    "project_description":"Project brief description",
+    "author":"Author",
+    "author_email":"Your email here",
+    "homepage":"Homepage of the project",
+    "github_link":"Github repo link",
+    "github_issues":"Github issues link here",
+    "gitignore_files":["venv", "tests", "*egg.info", "scripts", "__pycache__"],
+    "dependencies":["loguru==0.7.2"],
+    "structure":[
+        {
+            "scripts":[
+                "main.py"
+            ]
+        },
+        {
+            "src":[
+                "__init__.py",
+                {
+                    "package_name":[
+                        "__init__.py",
+                        "__main__.py",
+                        {
+                            "subpackage1":[
+                                "__init__.py"
+                            ],
+                            "subpackage2":[
+                                "__init__.py"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "tests":[
+                        "test.py"
+                    ]
+                }
+            ]
+        },
+        "other.file",
+        "other.file2"
+    ]
+
+}"""
