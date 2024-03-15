@@ -1,5 +1,6 @@
 import json
 import os
+import platoform
 
 from progress.bar import IncrementalBar
 from datetime import datetime
@@ -92,9 +93,9 @@ def build_base(structure: dict) -> None:
         sleep(0.2)
         bar.suffix = "Creating virtualenv"
         bar.next()
-        try:
+        if platoform.system() == "Windows":
             os.system("python -m venv venv")
-        except Exception:
+        else:
             os.system("python3 -m venv venv")
 
         sleep(0.2)
