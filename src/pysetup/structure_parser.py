@@ -93,7 +93,7 @@ def build_base(structure: dict) -> None:
         sleep(0.2)
         bar.suffix = "Creating virtualenv"
         bar.next()
-        if platoform.system() == "Windows":
+        if platform.system() == "Windows":
             os.system("python -m venv venv")
         else:
             os.system("python3 -m venv venv")
