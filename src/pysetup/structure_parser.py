@@ -1,6 +1,6 @@
 import json
 import os
-import platoform
+import platform
 
 from progress.bar import IncrementalBar
 from datetime import datetime
