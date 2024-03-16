@@ -1,6 +1,6 @@
 PYPROJECT_TOML = """[build-system]
 requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build-meta"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "%proj_name%"
