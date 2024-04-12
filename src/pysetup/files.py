@@ -82,29 +82,24 @@ STRUCT = """{
                 "main.py"
             ]
         },
-        {
-            "src":[
-                "__init__.py",
-                {
-                    "package_name":[
-                        "__init__.py",
-                        "__main__.py",
-                        {
-                            "subpackage1":[
-                                "__init__.py"
-                            ],
-                            "subpackage2":[
-                                "__init__.py"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "tests":[
-                        "test.py"
-                    ]
-                }
-            ]
+            {
+                "package_name":[
+                    "__init__.py",
+                    "__main__.py",
+                    {
+                        "subpackage1":[
+                            "__init__.py"
+                        ],
+                        "subpackage2":[
+                            "__init__.py"
+                        ]
+                    }
+                ]
+            },
+            {
+                "tests":[
+                    "test.py"
+                ]
         },
         "other.file",
         "other.file2"
