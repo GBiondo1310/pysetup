@@ -8,7 +8,7 @@ version = "%version%"
 authors = [
     { name="%author%", email="%email%"},
 ]
-description = "%proj_brief%"
+description = "%brief%"
 readme = "README.md"
 dependencies = %dependencies%
 
@@ -23,6 +23,9 @@ classifiers = [
 Homepage = "%homepage%"
 Github = "%github%"
 Issues = "%issues%"
+
+[tool.setuptools.packages]
+find={}
 """
 
 MIT_LICENSE = """MIT License
@@ -65,44 +68,29 @@ pip install project_name@git+"github_link#egg=<project_name>"
 ```
 """
 
-STRUCT = """{
-    "project_name_required":"Your project name here",
-    "project_version": "0.0",
-    "project_description":"Project brief description",
-    "author":"Author",
-    "author_email":"Your email here",
-    "homepage":"Homepage of the project",
-    "github_link":"Github repo link",
-    "github_issues":"Github issues link here",
-    "gitignore_files":["venv", "tests", "*egg.info", "scripts", "__pycache__"],
-    "dependencies":["loguru==0.7.2"],
-    "structure":[
+
+STRUCT = {
+    "project_name_required": "",
+    "project_version_required": "",
+    "project_description": "",
+    "author": "",
+    "author_email": "",
+    "homepage": "",
+    "github_link": "",
+    "github_issues": "",
+    "gitignore_files": ["venv", "tests", "scripts", "*.egg-info", "__pycache__"],
+    "dependencies": ["pylogger@git+https://github.com/GBiondo1310/pylogger.git"],
+    "sphinx": {"docs_dir": "docs"},
+    "git": {"branches": ["master", "dev"], "github": ""},
+    "structure": [
+        {"scripts": ["main.py"]},
         {
-            "scripts":[
-                "main.py"
+            "library_name": [
+                "__init__.py",
+                "__main__.py",
+                {"package_1": ["__init__.py"], "package_2": ["__init__.py"]},
             ]
         },
-            {
-                "package_name":[
-                    "__init__.py",
-                    "__main__.py",
-                    {
-                        "subpackage1":[
-                            "__init__.py"
-                        ],
-                        "subpackage2":[
-                            "__init__.py"
-                        ]
-                    }
-                ]
-            },
-            {
-                "tests":[
-                    "test.py"
-                ]
-        },
-        "other.file",
-        "other.file2"
-    ]
-
-}"""
+        {"tests": ["tests.py"]},
+    ],
+}

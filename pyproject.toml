@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pysetup"
-version = "2024.0.2"
+version = "2.0.0.dev1"
 authors = [
   { name="GBiondo1310", email="giacomo.biondelli@gmail.com" },
 ]
-description = "nctht_server"
+description = "Set up your new python project quickly"
 readme = "README.md"
 dependencies = [
     "progress==1.6",
@@ -25,5 +25,5 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/GBiondo1310/nctht_server"
-Issues = "https://github.com/GBiondo1310/nctht_server/issues"
+Homepage = "https://github.com/GBiondo1310/pysetup"
+Issues = "https://github.com/GBiondo1310/pysetup/issues"

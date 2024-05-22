@@ -7,37 +7,57 @@
     "homepage":"Homepage of the project",
     "github_link":"Github repo link",
     "github_issues":"Github issues link here",
-    "gitignore_files":["venv", "tests", "*egg.info", "scripts", "__pycache__"],
-    "dependencies":["loguru==0.7.2"],
+    "gitignore_files":[
+        "venv",
+        "tests",
+        "*egg-info",
+        "scripts",
+        "__pycache__",
+        "struct.json",
+        "docs/*",
+        "!dics/_build",
+        "docs/_build/doctrees",
+        "logs",
+        ".vscode"
+    ],
+    "dependencies":[],
+    "dev_dependencies":["pylogger@git+https://github.com/GBiondo1310/pylogger.git"],
+    "use_sphinx":true,
+    "git":{
+        "branches":[
+            "master",
+            "dev"
+        ],
+        "github":{
+            "remotes":{
+                "origin":"github_link"
+            }
+        }
+    },
     "structure":[
         {
             "scripts":[
                 "main.py"
             ]
         },
-        {
-            "src":[
-                "__init__.py",
-                {
-                    "package_name":[
-                        "__init__.py",
-                        "__main__.py",
-                        {
-                            "subpackage1":[
-                                "__init__.py"
-                            ],
-                            "subpackage2":[
-                                "__init__.py"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "tests":[
-                        "test.py"
-                    ]
-                }
-            ]
+            {
+                "package_name":[
+                    "__init__.py",
+                    "__main__.py",
+                    {
+                        "subpackage1":[
+                            "__init__.py"
+                        ],
+                        "subpackage2":[
+                            "__init__.py"
+                        ]
+                    }
+                ]
+            },
+            {
+                "tests":[
+                    "test.py"
+                ]
         },
         "other.file",
         "other.file2"

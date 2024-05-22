@@ -118,7 +118,6 @@ def install_dependencies(structure: dict) -> None:
     if dependencies != "":
         os.system(f"venv/bin/pip install {dependencies}")
     print("")
-    return None
 
 
 class ModulesBuilder:

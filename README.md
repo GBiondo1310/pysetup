@@ -1,3 +1,7 @@
+# PYSETUP2 OUT NOW!
+__CHECK IT OUT: ```https://github.com/GBiondo1310/pysetup2.git```__
+
+
 # PySetup
 ### Very small tool to quickly setup a fresh python env ready to customize.
 
